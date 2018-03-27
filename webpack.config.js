@@ -139,7 +139,16 @@ const config = {
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
-  ]
+  ],
+  resolve: {
+    alias: {
+      Components: path.resolve(__dirname, 'src/Components'),
+      Config: path.resolve(__dirname, 'src/Config'),
+      Assets: path.resolve(__dirname, 'src/Assets'),
+      Reducers: path.resolve(__dirname, 'src/Reducers')
+    },
+    extensions: ['.js', '.scss', '.svg', '.css']
+  }
 }
 
 module.exports = config
